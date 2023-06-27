@@ -15,7 +15,9 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -43,7 +45,7 @@ public class ProductController {
 
     @PutMapping
     @Transactional
-    public ResponseEntity<?> updateProduct(@RequestBody @Valid RequestProduct data){
+    public ResponseEntity<Product> updateProduct(@RequestBody @Valid RequestProduct data){
         Optional<Product> optionalProduct = repository.findById(data.id());
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
@@ -55,7 +57,17 @@ public class ProductController {
         }
     }
 
-
-
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<Product> deleteProduct(@PathVariable String id){
+        Optional<Product> optionalProduct = repository.findById(id);
+        if (optionalProduct.isPresent()) {
+            Product product = optionalProduct.get();
+            product.setActive(false);
+            return ResponseEntity.noContent().build();
+        } else {
+            throw new EntityNotFoundException();
+        }
+    }
 
 }

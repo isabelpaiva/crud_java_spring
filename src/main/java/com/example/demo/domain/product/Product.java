@@ -3,7 +3,7 @@ package com.example.demo.domain.product;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.UUID;
+// import java.util.UUID;
 
 @Table(name="product")
 @Entity(name="product")
