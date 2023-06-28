@@ -1,43 +1,45 @@
 # Simple CRUD :coffee:
-This repository contains a simple CRUD project built using Java Spring. The aim of this repository is to practice and share how you can build all CRUD Methods using Java Spring.
+Este repositório contém um projeto CRUD simples construído usando Java Spring. O objetivo deste repositório é praticar e compartilhar como você pode construir todos os métodos CRUD usando Java Spring.
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Configuration](#configuration)
+- [Instalação](#instalação)
+- [Configuração](#configuração)
 - [API Endpoints](#api-endpoints)
-- [Database](#database)
+- [Banco de Dados](#banco-de-dados)
 
-## Installation
+## Instalação
 
-1. Clone the repository:
+1. Clone o repositório:
 
 ```bash
 $ git clone git@github.com:isabelpaiva/crud_java_spring.git
 ```
 
-2. Install dependencies with Maven
+2. Instale as dependências com o Maven
 
-## Usage
+## Configuração
 
-1. Start the application with Maven
-2. The API will be accessible at http://localhost:8080
+1. Inicie a aplicação com o Maven
+2. A API estará acessível em http://localhost:8080
 
 
 ## API Endpoints
-The API provides the following endpoints:
+A API fornece os seguintes endpoints:
 
 ```markdown
-GET /product - Retrieve a list of all data.
+GET /product - Recupera uma lista de todos os dados.
 
-POST /product - Register a new data.
+POST /product - Registra um novo dado.
 
-PUT /product - Alter data.
+PUT /product - Altera dados.
 
-DELETE /product/{id} - Inactivate data.
+DELETE /product/{id} - Inativa dados.
 ```
 
-## Database
-The project uses PostgresSQL as the database. The necessary database migrations are managed using Flyway.
+## Banco de Dados
 
-To install PostgresSQL locally you can [click here](https://www.postgresql.org/download/).
+O projeto utiliza o PostgresSQL como banco de dados. As migrações de banco de dados necessárias são gerenciadas usando o Flyway.
+
+Para instalar o PostgresSQL localmente, você pode [clicar aqui](https://www.postgresql.org/download/).
+
