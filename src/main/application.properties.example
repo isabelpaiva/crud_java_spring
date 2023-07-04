@@ -1,4 +1,4 @@
 spring.datasource.url=jdbc:postgresql://localhost:5432/product
-spring.datasource.username=isabel
-spring.datasource.password=8824230802
+spring.datasource.username=
+spring.datasource.password=
 spring.flyway.baselineOnMigrate=true
